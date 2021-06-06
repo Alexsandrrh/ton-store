@@ -1,6 +1,6 @@
-- const cryptoBot = { type: "crypto-bot", icon: "assets/images/crypto-bot.png", name: "Crypto Bot", description: "Buy, sell, store and pay with cryptocurrency whenever you want"}
-- const minerBot = { type: "miner-bot", icon: "assets/images/miner-bot.png", name: "Miner Bot", description: "This bot provides automated TON mining in cloud"}
-- const yourApp = { type: "your-app", icon: "assets/images/your-app.png", name: "Your App", description: "Create Dapp for TON and be here <a href='mailto:newapp@tonstore.org'>newapp@tonstore.org</a>"}
+- const cryptoBot = { type: "crypto-bot", url: "https://t.me/CryptoBot", icon: "assets/images/crypto-bot.png", name: "Crypto Bot", description: "Buy, sell, store and pay with cryptocurrency whenever you want"}
+- const minerBot = { type: "miner-bot", url: "https://t.me/TonMinerBot", icon: "assets/images/miner-bot.png", name: "Miner Bot", description: "This bot provides automated TON mining in cloud"}
+- const yourApp = { type: "your-app", url: "#", icon: "assets/images/your-app.png", name: "Your App", description: "Create Dapp for TON and be here <a href='mailto:newapp@tonstore.org'>newapp@tonstore.org</a>"}
 
 
 .favorites
@@ -8,8 +8,12 @@
         h2.favorites__title Our favorites
         .favorites__content
             .favorites__items
-                each val in [cryptoBot, minerBot, yourApp]
-                    .favorite-card(data-type=val.type)
+                each val in [cryptoBot, minerBot]
+                    a.favorite-card(href=val.url, target="_blank" data-type=val.type)
                         img.favorite-card__icon(src=val.icon)
                         h3.favorite-card__name= val.name
                         p.favorite-card__description!= val.description
+                .favorite-card(data-type=yourApp.type)
+                    img.favorite-card__icon(src=yourApp.icon)
+                    h3.favorite-card__name= yourApp.name
+                    p.favorite-card__description!= yourApp.description

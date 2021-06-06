@@ -45,7 +45,7 @@
     padding: 22px;
     border-radius: 20px;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0;
 
     &[data-type="crypto-bot"],
     &[data-type="miner-bot"] {
