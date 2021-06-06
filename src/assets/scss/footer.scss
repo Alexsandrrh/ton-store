@@ -73,12 +73,17 @@
         width: auto;
         max-width: none;
       }
+
+      &__title {
+        margin-bottom: 7px;
+      }
     }
 
     &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 22px 0 66px;
 
       .menu {
         display: flex;

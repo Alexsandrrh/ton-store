@@ -1,7 +1,4 @@
 @media screen and (min-width: 320px) {
-  .differents {
-  }
-
   .different-item {
     position: relative;
     margin-bottom: 44px;
@@ -54,10 +51,15 @@
 
 @media screen and (min-width: 1440px) {
   .differents {
+    margin-bottom: 44px;
     &__items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 17px;
     }
+  }
+
+  .different-item {
+    margin-bottom: 0;
   }
 }
