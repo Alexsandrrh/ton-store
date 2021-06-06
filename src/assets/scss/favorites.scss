@@ -1,0 +1,126 @@
+@media screen and (min-width: 320px) {
+  .favorites {
+    padding-top: 44px;
+    margin-bottom: 44px;
+
+    &__container.container {
+      padding: 0;
+
+      .favorites__title,
+      .favorites__items {
+        padding: 0 30px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 22px;
+    }
+
+    &__content {
+      overflow-x: scroll;
+    }
+
+    &__items {
+      display: inline-flex;
+      .favorite-card {
+        margin-right: 17px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .favorite-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-end;
+    width: 276px;
+    height: 180px;
+    padding: 22px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: -1;
+
+    &[data-type="crypto-bot"],
+    &[data-type="miner-bot"] {
+      background: linear-gradient(
+        72.19deg,
+        #413057 0%,
+        #0088cc 68.03%,
+        #0088cc 97.78%
+      );
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      content: "";
+      background: linear-gradient(
+          180deg,
+          #adadad 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(72.54deg, #413057 2.4%, #0088cc 99.28%);
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    &__icon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      font-family: Mulish;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 28px;
+      color: $white;
+      margin-bottom: 6px;
+    }
+
+    &__description {
+      font-family: Mulish;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 200px;
+
+      a {
+        color: $linkBlue;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .favorites {
+    padding-top: 44px;
+    margin-bottom: 44px;
+
+    &__container.container {
+
+      .favorites__title,
+      .favorites__items {
+        padding: 0;
+      }
+    }
+
+    &__content {
+      overflow-x: auto;
+    }
+  }
+
+  .favorite-card {
+    width: 322px;
+    height: 210px;
+  }
+}
