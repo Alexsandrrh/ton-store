@@ -18,6 +18,9 @@
 
     &__content {
       overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
     }
 
     &__items {
