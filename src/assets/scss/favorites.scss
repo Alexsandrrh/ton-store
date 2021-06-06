@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) {
   .favorites {
     padding-top: 44px;
-    margin-bottom: 44px;
+    margin-bottom: 24px;
 
     &__container.container {
       padding: 0;
@@ -18,9 +18,12 @@
 
     &__content {
       overflow-x: scroll;
-      &::-webkit-scrollbar {
-        width: 0;
-      }
+      padding-bottom: 20px;
+      //&::-webkit-scrollbar {
+      //  -webkit-appearance: none;
+      //  width: 0;
+      //  height: 0;
+      //}
     }
 
     &__items {
