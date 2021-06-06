@@ -1,21 +1,21 @@
 @media screen and (min-width: 320px) {
   .different-item {
-    position: relative;
+    //position: relative;
     margin-bottom: 44px;
 
-    &:after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 60px;
-      content: "";
-      background: linear-gradient(
-        360deg,
-        #ffffff 10%,
-        rgba(235, 235, 235, 0) 100%
-      );
-    }
+    //&:after {
+    //  position: absolute;
+    //  right: 0;
+    //  bottom: 0;
+    //  left: 0;
+    //  height: 60px;
+    //  content: "";
+    //  background: linear-gradient(
+    //    360deg,
+    //    #ffffff 10%,
+    //    rgba(235, 235, 235, 0) 100%
+    //  );
+    //}
 
     &__name {
       margin-bottom: 6px;
@@ -43,6 +43,7 @@
       margin-bottom: 10px;
 
       &:last-child {
+        background: linear-gradient(180deg, #EBEBEB 0%, rgba(235, 235, 235, 0) 100%);
         margin-bottom: 0;
       }
     }
