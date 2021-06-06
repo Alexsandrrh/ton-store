@@ -1,12 +1,12 @@
 {
   "name": "ton-store",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "./build/index.html",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.pug --open",
     "pretty": "npx prettier --write .",
-    "build": "parcel build src/index.pug -d docs --public-url ./"
+    "build": "parcel build src/index.pug --public-url ./"
   },
   "devDependencies": {
     "cssnano": "^5.0.5",
