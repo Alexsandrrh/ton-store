@@ -9,8 +9,10 @@ html(lang="en")
     body
         .app#app
             include components/header
+            +header('Apps')
             include components/favorites
             include components/differents
             include components/footer
+            +footer('Apps')
         // Scripts
         script(src="./assets/js/index.js")

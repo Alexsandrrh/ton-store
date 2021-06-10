@@ -9,6 +9,7 @@ html(lang="en")
     body
         .app#app
             include components/header
+            +header('Terms')
             main.terms
                 .terms__container.container
                     h3 GENERAL INFORMATION
@@ -141,6 +142,7 @@ html(lang="en")
 
                     p(style='font-size:12px') Last Amended: 13 February 2019
             include components/footer
+            +footer('Terms')
         script(src="./assets/js/index.js")
 
 

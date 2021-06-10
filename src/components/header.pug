@@ -1,13 +1,15 @@
-header.header
-    .header__container.container
-        a.header-logo(href='#')
-            img.header-logo__icon(src="assets/images/logo.svg")
-            .header-logo__name TON Store
+mixin header(activePage)
+    header.header
+        .header__container.container
+            a.header-logo(href='#')
+                img.header-logo__icon(src="assets/images/logo.svg")
+                .header-logo__name TON Store
 
-        button.header-burger(id="btn-open")
-            img.header-burger__icon(src="assets/images/burger.svg")
+            button.header-burger(id="btn-open")
+                img.header-burger__icon(src="assets/images/burger.svg")
 
-        .header-menu(id="menu")
-            include menu
-            button.header-menu__button(id="btn-close")
-                img.header-menu__icon(src="assets/images/cross.svg")
+            .header-menu(id="menu")
+                include menu
+                +menu(activePage)
+                button.header-menu__button(id="btn-close")
+                    img.header-menu__icon(src="assets/images/cross.svg")
