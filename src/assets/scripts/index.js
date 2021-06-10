@@ -1,5 +1,3 @@
-import "../scss/index.scss";
-
 const btnOpen = document.getElementById("btn-open");
 const btnClose = document.getElementById("btn-close");
 const { body } = document;

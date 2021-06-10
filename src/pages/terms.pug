@@ -6,9 +6,10 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel='shortcut icon' href='assets/images/favicon.ico' type='image/x-icon')
+        link(rel="stylesheet", href="./assets/styles/main.css")
     body
         .app#app
-            include components/header
+            include ../components/header
             +header('Terms')
             main.terms
                 .terms__container.container
@@ -141,8 +142,8 @@ html(lang="en")
                     p In order to address a question, to resolve a complaint regarding the Website or the DappRadar services, or to receive further information regarding the services, please contact DappRadar via e-mail at <a href="mailto:info@tonstore.org">info@tonstore.org</a>
 
                     p(style='font-size:12px') Last Amended: 13 February 2019
-            include components/footer
+            include ../components/footer
             +footer('Terms')
-        script(src="./assets/js/index.js")
+        script(src="./assets/scripts/index.js")
 
 
