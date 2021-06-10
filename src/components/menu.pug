@@ -1,5 +1,5 @@
 mixin menu(activePage)
     ul.menu
-        each val in [{name:"Apps", href: "index.html"}, {name:"Terms", href: "terms.html"}, {name:"Blog", href: '#'}, {name:"For Creators", href:"#"}]
+        each val in [{name:"Apps", href: "index.html"}, {name:"Terms", href: "terms.html"}, {name:"Disclaimer", href: '#'}, {name:"For Creators", href:"#"}]
             li.menu__item
                 a(href=val.href, class=`menu__link ${val.name === activePage && '-active'}`)= val.name
