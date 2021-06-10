@@ -1,0 +1,42 @@
+.terms {
+  margin-bottom: 40px;
+  &__container {
+    padding-top: 20px;
+
+    h3 {
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 19px;
+      line-height: 24px;
+      color: $darkBlue;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    a {
+      color: $linkBlue;
+    }
+
+    ul {
+      padding-left: 30px;
+      li {
+        list-style-type: circle;
+      }
+    }
+
+    p {
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: $darkBlue;
+      margin-bottom: 15px;
+    }
+  }
+}

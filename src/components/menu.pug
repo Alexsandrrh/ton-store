@@ -1,4 +1,5 @@
-ul.menu
-    each val in ["Apps", "Reports", "Blog", "For Creators"]
-        li.menu__item
-            a(href='#', class=`menu__link ${val === 'Apps' && '-active'}`)= val
+mixin menu
+    ul.menu
+        each val in [{name:"Apps", href: "./index.pug"}, {name:"Terms", href: "./terms.pug"}, {name:"Blog", href: '#'}, {name:"For Creators", href:"#"}]
+            li.menu__item
+                a(href=val.href, class=`menu__link ${val.name === 'Apps' && '-active'}`)= val.name
