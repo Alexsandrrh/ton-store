@@ -9,7 +9,7 @@ const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 
 const config = {
-  output: "./dist",
+  output: "./build",
 
   pug: {},
 };
@@ -20,7 +20,7 @@ gulp.task("clean", () => {
 });
 
 gulp.task("pug", () => {
-  return gulp.src("./src/pages/*.pug").pipe(pug()).pipe(gulp.dest("./dist"));
+  return gulp.src("./src/pages/*.pug").pipe(pug()).pipe(gulp.dest("./build"));
 });
 
 gulp.task("styles", () => {
@@ -29,7 +29,7 @@ gulp.task("styles", () => {
     .pipe(autoprefixer())
     .pipe(sass())
     .pipe(cssnano())
-    .pipe(gulp.dest("./dist/assets/styles/"));
+    .pipe(gulp.dest("./build/assets/styles/"));
 });
 
 gulp.task("scripts", () => {
@@ -41,20 +41,20 @@ gulp.task("scripts", () => {
       })
     )
     .pipe(terser())
-    .pipe(gulp.dest("./dist/assets/scripts/"));
+    .pipe(gulp.dest("./build/assets/scripts/"));
 });
 
 gulp.task("images", () => {
   return gulp
     .src("./src/assets/images/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("./dist/assets/images"));
+    .pipe(gulp.dest("./build/assets/images"));
 });
 
 gulp.task("fonts", () => {
   return gulp
     .src("./src/assets/fonts/*")
-    .pipe(gulp.dest("./dist/assets/fonts/"));
+    .pipe(gulp.dest("./build/assets/fonts/"));
 });
 
 gulp.task("watch", () => {});

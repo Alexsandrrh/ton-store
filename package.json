@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "pretty": "npx prettier --write .",
-    "build": "gulp build"
+    "build": "gulp build",
+    "push": "rsync -avzL --exclude '.git' --exclude 'node_modules' ./ dev:./ton-store --delete && ssh -t dev 'cd ~/ton-store'"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
